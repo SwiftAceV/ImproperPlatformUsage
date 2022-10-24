@@ -1,0 +1,17 @@
+<html>
+<body>
+<h1>Hello, <span id="showName">Friend</span></h1>
+<script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                                var url = new URL(window.location);
+                                var urlParams = url.searchParams;
+
+                                       if( urlParams.has('name') ){
+                                        nameInput = urlParams.get('name');
+                                        var nameSpan = document.getElementById('showName');
+                                        nameSpan.innerHTML = nameInput;
+                                       }
+                                 });
+                </script>
+</body>
+</html>
